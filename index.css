@@ -1,0 +1,203 @@
+ :root {
+      --red: hsl(4, 100%, 67%);
+      --dark-blue: hsl(234, 29%, 20%);
+      --blue: hsl(235, 18%, 26%);
+      --grey: hsl(0, 0%, 58%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    /* ---------- CARD ---------- */
+    .card {
+      background: var(--white);
+      max-width: 900px;
+      /* width: 100%; */
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: 400px 300px;
+      overflow: hidden;
+      padding: 1rem;
+      column-gap: 30px;
+    }
+
+    .content {
+      padding: 1rem;
+      margin-bottom: 50px;
+      margin-left: 30px;
+    }
+
+    h1 {
+      color: var(--dark-blue);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.1rem;
+      color: var(--blue);
+    }
+
+    ul li::before {
+    content: url("./assets/images/icon-list.svg");
+      color: var(--red);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--dark-blue);
+    }
+
+    .error {
+      color: var(--red);
+      font-size: 0.75rem;
+      float: right;
+      display: none;
+    }
+
+    input {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--grey);
+      margin: 0.5rem 0 1.5rem;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--dark-blue);
+    }
+
+    input.invalid {
+      border-color: var(--red);
+      background: hsl(4, 100%, 95%);
+      color: var(--red);
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 8px;
+      border: none;
+      background: var(--dark-blue);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, var(--red), orange);
+    }
+
+    .image {
+      background: linear-gradient(135deg, #ff6a3d, #ff3d77);
+      background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+  background-size:cover;
+  background-position:center;
+  /* padding: 3rem; */
+    height: 100%;
+
+    
+
+    }
+
+    /* ---------- SUCCESS ---------- */
+    .success {
+      display: none;
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 20px;
+      max-width: 400px;
+    }
+
+    .success h1 {
+      font-size: 2.5rem;
+    }
+
+    .success p {
+      margin: 1.5rem 0;
+    }
+
+    /* ---------- MOBILE ---------- */
+    @media (max-width: 768px) {
+      .card {
+       grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+      }
+      .content{
+    margin-left: 8px;
+
+      }
+.image {
+    order: -1; /* move image to top */
+    height: 200px;
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    /* height: 100%; */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    object-position: center;
+
+
+}
+  /* }
+      .image {
+        height: 250px;
+      } */
+
+      h1 {
+        font-size: 2rem;
+      }
+      p{
+        font-size: 0.8rem;
+
+      }
+       ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0.8rem;
+    }
+
+    ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: var(--blue);
+    }
+
+    ul li::before {
+    content: url("./assets/images/icon-list.svg");
+      color: var(--red);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    }
