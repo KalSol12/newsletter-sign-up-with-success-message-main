@@ -139,16 +139,24 @@
       display: none;
       background: var(--white);
       padding: 3rem;
-      border-radius: 20px;
+      /* border-radius: 20px; */
       max-width: 400px;
+      height:650px;
+
+
+    }
+    .success  button{
+        margin-top: 200px;
     }
 
     .success h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
 
     .success p {
-      margin: 1.5rem 0;
+      margin: 1.2rem 0;
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
 
     /* ---------- MOBILE ---------- */
@@ -173,6 +181,15 @@
 
 
 }
+  body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--blue);
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+      /* padding: 1rem; */
+    }
 
   /* }
       .image {

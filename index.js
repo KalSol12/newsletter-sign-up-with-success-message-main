@@ -16,6 +16,7 @@
         emailInput.classList.add("invalid");
         return;
       }
+      
 
       error.style.display = "none";
       emailInput.classList.remove("invalid");
